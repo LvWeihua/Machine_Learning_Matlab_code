@@ -1,0 +1,9 @@
+A=importdata(data.txt);
+fprintf('trainning data are:\n');
+disp(A);
+[m,n]=size(A);
+X=data(:,1:n-1);
+y=A(:,n);
+fprintf('m=%d,n=%d,ierator=5000\n',m,n);
+theta=grad(X,y,5000);
+fprintf('theta=\n');disp(theta');
